@@ -1,0 +1,14 @@
+.footer {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 20px;
+  color: #555;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .footer {
+    font-size: 0.875rem;
+  }
+}

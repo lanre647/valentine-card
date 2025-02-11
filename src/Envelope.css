@@ -1,0 +1,67 @@
+.envelope {
+  width: 200px;
+  height: 150px;
+  background: #e0e0e0;
+  margin: 50px auto;
+  position: relative;
+  cursor: pointer;
+  animation: shake 1s infinite;
+}
+
+.flap {
+  width: 200px;
+  height: 100px;
+  background: #ff99cc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: flapMove 2s ease-in-out infinite;
+}
+
+.body {
+  width: 200px;
+  height: 150px;
+  background: #ff6699;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes flapMove {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -10px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .envelope {
+    width: 150px;
+    height: 112.5px;
+  }
+
+  .flap {
+    width: 150px;
+    height: 75px;
+  }
+
+  .body {
+    width: 150px;
+    height: 112.5px;
+  }
+}
